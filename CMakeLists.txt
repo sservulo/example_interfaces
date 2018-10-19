@@ -14,8 +14,11 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "action/Fibonacci.action"
+#  "action/Fibonacci.action"
   "srv/AddTwoInts.srv"
+  "srv/SendFibonacci.srv"
+  "srv/CancelFibonacci.srv"
+  "srv/ResultFibonacci.srv"
 )
 
 install(FILES mapping_rules.yaml DESTINATION share/${PROJECT_NAME})
